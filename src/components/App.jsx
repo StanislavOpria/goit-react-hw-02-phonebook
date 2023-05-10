@@ -1,16 +1,11 @@
+import styled from 'styled-components';
+
+const Title = styled.div`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
 export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
+  return <Title>React homework template</Title>;
 };
