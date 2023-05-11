@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import { FilterInput } from './Filter.styled';
 
 export const Filter = ({ filterValue, onChange }) => {
   const handleChange = event => {
     onChange(event.target);
   };
   return (
-    <label>
+    <FilterInput>
       Find contacts by name
       <input
         type="text"
@@ -13,7 +14,7 @@ export const Filter = ({ filterValue, onChange }) => {
         value={filterValue}
         onChange={handleChange}
       />
-    </label>
+    </FilterInput>
   );
 };
 

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
+import { AppWrap } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -57,16 +59,7 @@ export class App extends Component {
   render() {
     const filteredContacts = this.filter();
     return (
-      <div
-        style={{
-          height: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
-          color: '#010101',
-        }}
-      >
+      <AppWrap>
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.handleSubmit} />
         <h2>Contacts</h2>
@@ -75,7 +68,7 @@ export class App extends Component {
           contacts={filteredContacts}
           onDelete={this.deleteContact}
         />
-      </div>
+      </AppWrap>
     );
   }
 }
